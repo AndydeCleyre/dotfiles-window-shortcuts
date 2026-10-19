@@ -1,0 +1,125 @@
+device_rules:
+  - conditions: $touchpad
+    swipe:
+      angle_tolerance: 45
+
+touchpad:
+  gestures:
+
+    - type: swipe
+      fingers: 3
+      direction: left
+      actions:
+        - on: begin
+          command: ~/.local/share/window-shortcuts/super-direction.zsh --swipe LEFT
+    - type: swipe
+      fingers: 3
+      direction: right
+      actions:
+        - on: begin
+          command: ~/.local/share/window-shortcuts/super-direction.zsh --swipe RIGHT
+
+    - type: swipe
+      fingers: 3
+      direction: up
+      actions:
+        - on: begin
+          command: ~/.local/share/window-shortcuts/super-direction.zsh --swipe UP
+    - type: swipe
+      fingers: 3
+      direction: down
+      actions:
+        - on: begin
+          command: ~/.local/share/window-shortcuts/super-direction.zsh --swipe DOWN
+
+    - type: swipe
+      fingers: 4
+      direction: left
+      actions:
+        - on: begin
+          plasma_shortcut: kwin,Switch to Next Desktop
+    - type: swipe
+      fingers: 4
+      direction: right
+      actions:
+        - on: begin
+          plasma_shortcut: kwin,Switch to Previous Desktop
+
+    - type: swipe
+      fingers: 4
+      direction: up
+      actions:
+        - on: begin
+          plasma_shortcut: kwin,Expose
+    - type: swipe
+      fingers: 4
+      direction: down
+      actions:
+        - on: begin
+          plasma_shortcut: kwin,Expose
+
+    - type: rotate
+      fingers: 3
+      direction: clockwise
+      actions:
+        - on: begin
+          command: ~/.local/share/window-shortcuts/rotate.zsh 3 CLOCKWISE
+    - type: rotate
+      fingers: 3
+      direction: counterclockwise
+      actions:
+        - on: begin
+          command: ~/.local/share/window-shortcuts/rotate.zsh 3 COUNTERCLOCKWISE
+
+    - type: rotate
+      fingers: 4
+      direction: clockwise
+      actions:
+        - on: begin
+          command: ~/.local/share/window-shortcuts/rotate.zsh 4 CLOCKWISE
+    - type: rotate
+      fingers: 4
+      direction: counterclockwise
+      actions:
+        - on: begin
+          command: ~/.local/share/window-shortcuts/rotate.zsh 4 COUNTERCLOCKWISE
+
+    - type: hold
+      fingers: 2
+      actions:
+        - command: ~/.local/share/window-shortcuts/super-direction.zsh X
+
+    - type: hold
+      fingers: 3
+      actions:
+        - command: ~/.local/share/window-shortcuts/super-direction.zsh SPACE
+
+    - type: hold
+      fingers: 4
+      actions:
+        - plasma_shortcut: kwin,karousel-window-toggle-floating
+
+    - type: pinch
+      fingers: 2
+      direction: in
+      actions:
+        - command: ~/.local/share/window-shortcuts/super-direction.zsh --pinch LEFT
+          on: begin
+    - type: pinch
+      fingers: 2
+      direction: out
+      actions:
+        - command: ~/.local/share/window-shortcuts/super-direction.zsh --pinch RIGHT
+          on: begin
+    - type: pinch
+      fingers: 3
+      direction: in
+      actions:
+        - command: ~/.local/share/window-shortcuts/super-direction.zsh --pinch LEFT
+          on: begin
+    - type: pinch
+      fingers: 3
+      direction: out
+      actions:
+        - command: ~/.local/share/window-shortcuts/super-direction.zsh --pinch RIGHT
+          on: begin
