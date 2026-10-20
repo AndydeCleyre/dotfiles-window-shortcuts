@@ -86,6 +86,7 @@ touchpad:
 
     - type: hold
       fingers: 2
+      threshold: 150
       actions:
         - command: ~/.local/share/window-shortcuts/super-direction.zsh X
 
