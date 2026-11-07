@@ -1,6 +1,7 @@
 #!/bin/zsh -e
 
 # Dependencies:
+#   - kdotool
 #   - procps (pgrep)
 
 # Useful commands:
