@@ -50,13 +50,15 @@ touchpad:
       direction: up
       actions:
         - on: begin
-          plasma_shortcut: kwin,Expose
+          # plasma_shortcut: kwin,Expose
+          plasma_shortcut: kwin,Cycle Overview
     - type: swipe
       fingers: 4
       direction: down
       actions:
         - on: begin
-          plasma_shortcut: kwin,Expose
+          # plasma_shortcut: kwin,Expose
+          plasma_shortcut: kwin,Cycle Overview Opposite
 
     - type: rotate
       fingers: 3
@@ -100,6 +102,10 @@ touchpad:
       actions:
         - plasma_shortcut: kwin,karousel-window-toggle-floating
 
+    # It's much easier to successfully trigger 2-finger pinches than 3.
+    # Otherwise I might change 2-finger to UP and DOWN (resize floating window vertically),
+    # which is less needed than LEFT and RIGHT (resize floating window horizontally),
+    # because maximizing vertically (2-hold) is often suitable.
     - type: pinch
       fingers: 2
       direction: in
